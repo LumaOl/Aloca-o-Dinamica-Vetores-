@@ -1,0 +1,29 @@
+//maria luma da silva oliveira
+
+#include<stdio.h>				//bibliotecas
+#include<stdlib.h>
+#include <time.h>
+#define macro RAND_MAX 			//gerar numeros aleatorios
+
+int main(void){				//funcao principal
+	int i;						//declaracao de variaveis
+	double n, *g;
+
+	printf("\nInforme o numero de vetores: ");				//pedindo ao usuario o numero de vetores
+	scanf("%lf", &n);						//guarda valor de tamanho de valores que o usuario informou
+	
+	g =(double*) malloc(n*sizeof(double));		//abrir o espaÃ§o da memoria com uso do malloc
+	
+	printf("Intervalo da rand = [0,%d] \n", RAND_MAX);				//informando o intervalo de rand
+	
+	for(i=1; i<=10; i++){				//loop de repeticao para imprimir os 10 numeros aleatorios fixos
+		printf("Numero %d = %d \n", i, rand());					// mostrar numeros aleatorios usando o rand
+	}
+	
+	printf("\n");
+    for(i=1; i<=n; i++){        	//loop de repeticao para imprimir n os numeros aleatorios solicitado pelo usuario
+        printf("Numero %d = %d \n", i, rand());     // mostrar numeros aleatorios usando o rand
+    }
+	free(g);			//limpando o espaÃ§o da memoria aberto anteriormente
+	return 0;			//fim
+}

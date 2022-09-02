@@ -1,0 +1,44 @@
+//maria luma da silva oliveira
+//Q_01
+
+#include <stdio.h>		//bibliotecas
+#include <stdlib.h>
+
+int main(){					//funcao principal
+    int qdd, soma=0;			//declaraÃ§Ã£o de variaveis
+    int maior, menor, *s;
+    int i;
+
+    printf("Informe o tamanho do vetor: ");			//pedir ao usuario o tamanho do vetor
+    scanf("%d", &qdd);			//guardar valor informado
+  
+ int valores[qdd];
+  
+    s = (int*) malloc (qdd*sizeof(int));   			//uso do malloc para abrir um espaÃ§o na memoria 
+
+    for (i=0; i<qdd; i++){		//qdd = para repetir o numero de vezes que o usuario informou	
+        printf("Informe o valor: ");
+        scanf("%d", &valores[i]);
+        soma = soma + valores[i];		//soma dos valores informados anteriormente
+    }
+
+    
+    maior = valores[i];		// guarda maior numero
+    menor = valores[i];			//guarda menor numero
+
+    for (i=0; i<qdd; i++){		//laÃ§o de repetiÃ§Ã£o para percorrer os numeors e encontrar o maior valor
+        if (valores[i]>maior){
+            maior = valores[i];
+          }
+        else { (valores[i]<menor);	//laÃ§o de repetiÃ§Ã£o para percorrer os numeors e encontrar o mneor valor
+            menor = valores[i];
+        }
+    }
+
+    printf("\nO menor valor inserido foi: %d\n", menor);	//imprimir maior valor
+    printf("O maior valor inserido foi: %d\n", maior);	//imprimir menor valor
+    printf("S= %d", soma);		//soma dos valores
+
+    free(s);			//limpar memoria
+    return 0;		//fim
+}

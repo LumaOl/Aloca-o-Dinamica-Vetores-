@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 int main(){					//funcao principal
-    int qdd, soma=0;			//declaraÃ§Ã£o de variaveis
+    int qdd, soma=0;			//declaracao de variaveis
     int maior, menor, *s;
     int i;
 
@@ -14,7 +14,7 @@ int main(){					//funcao principal
   
  int valores[qdd];
   
-    s = (int*) malloc (qdd*sizeof(int));   			//uso do malloc para abrir um espaÃ§o na memoria 
+    s = (int*) malloc (qdd*sizeof(int));   			//uso do malloc para abrir um espaço na memoria 
 
     for (i=0; i<qdd; i++){		//qdd = para repetir o numero de vezes que o usuario informou	
         printf("Informe o valor: ");
@@ -26,11 +26,12 @@ int main(){					//funcao principal
     maior = valores[i];		// guarda maior numero
     menor = valores[i];			//guarda menor numero
 
-    for (i=0; i<qdd; i++){		//laÃ§o de repetiÃ§Ã£o para percorrer os numeors e encontrar o maior valor
+    for (i=0; i<qdd; i++){		//laÃ§o de repeticao para percorrer os numeors e encontrar o maior valor
         if (valores[i]>maior){
             maior = valores[i];
           }
-        else { (valores[i]<menor);	//laÃ§o de repetiÃ§Ã£o para percorrer os numeors e encontrar o mneor valor
+        else { (valores[i]<menor);	//laÃ§o de repetica
+        o para percorrer os numeors e encontrar o mneor valor
             menor = valores[i];
         }
     }

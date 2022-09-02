@@ -19,7 +19,7 @@ void preenche_ordenado(int n, int *v){				//funcao secundaria
 				}
 			}
 		}
-		for(i=0; i<n; i++){				//para informar os valores final jÃ¡ordenado
+		for(i=0; i<n; i++){				//para informar os valores final ja ordenado
 			printf("%d", *(v+i));
 		}
 }

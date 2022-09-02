@@ -1,0 +1,26 @@
+//maria luma da silva oliveira
+
+#include<stdio.h>		//bibliotecas
+#include<stdlib.h>
+
+int main(void){			//função principal
+	int alunos, i, *a;			//declaração de variaveis do tipo int
+	float notas, media;			// declaração de variaveis do tipo float
+	
+	printf("Informe o numeros de alunos: \n");		// pedindo o numeros de alunos da turma
+	scanf("%d", &alunos);			//guardado valores de alunos
+	
+	a=(int*) malloc(alunos*sizeof(int));			//uso do malloc para abrir espaço namemoria
+	
+	for(i=0; i<alunos; i++){			//loop para pedir valores do vetor nota da turma
+		printf("notas[%d]", i+1);
+		scanf("%f", &notas);
+		media += notas;					//somatorio das notas dos alunos
+	}
+	
+	media= media / alunos;				//media da classe
+	printf("A media da turma foi: %.2f", media); 			//imprimir resultado da media
+	
+	free(a);			//liberar memoria
+	return 0;			//fim
+}
